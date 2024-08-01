@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/VBeatZ/images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+
+.header {
+    border-radius: 10px;
+    border: 2px solid #786c3b;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.header h2 {
+    margin: auto;
+    color: rgb(134, 20, 87);
+    word-spacing: 0.5rem;
+}
+
+.header img {
+    width: 5rem;
+    height: 100%;
+}
+
+/*box*/
+
+.box {
+    border: 2px solid #744727;
+    padding: 2px;
+    height: 75vh;
+    border-radius: 10px;
+}
+
+.box .left {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+}
+
+.box .left .info {
+    border: 2px solid #786c3b;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2px;
+    height: 20%;
+    overflow-y: auto;
+}
+
+.info .home {
+    border: 2px solid #786c3b;
+    color: #4c2f1a;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 10px;
+    height: 20%;
+    font-size: 20px;
+    align-items: center;
+}
+
+.info .search {
+    border: 2px solid #786c3b;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 20%;
+    width: 100%;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.info .search input {
+    background-color: transparent;
+    color: #4c2f1a;
+    border: none;
+    padding: 10px;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.info .search input::placeholder {
+    color: #532e13;
+}
+
+.info .search input:focus {
+    border: none;
+    outline: none;
+}
+
+.box .left .library {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 2px solid #786c3b;
+    height: 79%;
+    margin: 5px 0;
+    padding: 0.2rem;
+    border-radius: 10px;
+}
+
+.box .left .library .libraryLogo {
+    border: 2px solid #786c3b;
+    color: #4c2f1a;
+    border-radius: 10px;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box .left .library .libraryLogo h3 {
+    font-size: 1rem;
+}
+
+.box .left .library .songList {
+    border: 2px solid #786c3b;
+    border-radius: 10px;
+    padding: 0.2rem;
+    height: 86%;
+    overflow: auto;
+}
+
+.box .left .library .songList ul li {
+    cursor: pointer;
+    list-style: none;
+    border: 2px solid #786c3b;
+    border-radius: 10px;
+    color: #4c2f1a;
+    margin: 2px 0;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: cursive;
+    white-space: nowrap;
+    overflow-x:hidden;
+    text-overflow: ellipsis;
+}
+
+.box .right {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 75%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.box .right .loginBar {
+    border: 2px solid #744727;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    min-height: 45px;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.box .right .loginBar img {
+    margin: 0 10px;
+    height: 100%;
+    width: 6.5%;
+}
+
+.box .right .loginBar .login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 40px;
+    margin: 0px 5px;
+}
+
+.box .right .loginBar .login a {
+    height: 90%;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #744727;
+    border-radius: 10px;
+    color: #4c2f1a;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 10ms;
+}
+
+.box .right .loginBar .login a:hover {
+    font-size: 18px;
+    border: 3px solid #744727;
+}
+
+.box .right .cardContainer {
+    border: 2px solid #786c3b;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 2px 0;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    gap: 5px;
+    height: 85%;
+    min-height: 260px;
+}
+
+.box .right .cardContainer .card {
+    cursor: pointer;
+    width: 190px;
+    height: fit-content;
+    padding: 2px;
+    border: 2px solid #744727;
+    border-radius: 10px;
+}
+
+.box .right .cardContainer .card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 5px 0;
+}
+
+.box .right .cardContainer .card h2 {
+    font-size: 20px;
+    color: #580967;
+}
+
+.box .right .cardContainer .card p {
+    font-size: 15px;
+    color: #6e2300;
+}
+
+.box .right .cardContainer .card :hover{
+    font-weight: bold;
+    box-shadow: #532e13;
+}
+
+
+/*playBar*/
+
+.playBar {
+    background: url("/VBeatZ/images/bg1.jpg");
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 12.5vh;
+    min-height: 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* centers the image horizontally and vertically */
+}
+
+.seekBar {
+    cursor: pointer;
+    height: 5px;
+    width: 70%;
+    background-color: #580967;
+    border-radius: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+.seekBar .circle {
+    position: absolute;
+    left: 0%;
+    width: 8px;
+    height: 8px;
+    border-radius: 13px;
+    background-color: #ff960f;
+    align-items: center;
+    transition: left 0.1s;
+}
+
+.allInfo {
+    border: 2px solid #6e2300;
+    color: #660066;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2px;
+    width: 65%;
+    margin: auto;
+}
+
+.allInfo .songInfo {
+    width: 30%;
+}
+
+.allInfo .songInfo span {
+    font-size: 15px;
+}
+
+.allInfo .songButtons {
+    width: 70px;
+    margin: 0 auto;
+}
+
+
+.allInfo .songButtons .controller {
+    cursor: pointer;
+    height: 95%;
+    width: 18px;
+}
+
+.allInfo .songTime {
+    width: max-content;
+    word-break: break-all;
+    font-size: 15px;
+}
+
+/*responsiveness*/
+
+@media screen and (max-width:980px) {
+    .box .left .library .songList ul li {
+        font-size: 0.77rem;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .box .left .library .libraryLogo h3 {
+        font-size: 0.8rem;
+    }
+
+    .box .right .cardContainer .card {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .box .left .library .songList ul li {
+        font-size: 0.65rem;
+    }
+
+    .allInfo .songInfo span {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    h2 {
+        font-size: 1rem;
+    }
+
+    .box .left {
+        padding: 1px 2px;
+    }
+
+    .box .left .library .libraryLogo {
+        gap: 1px;
+    }
+
+    .box .left .library .libraryLogo h3 {
+        font-size: 0.7rem;
+    }
+
+    .info img,
+    .libraryLogo img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .info .home {
+        font-size: 12px;
+    }
+
+    .info .search {
+        gap: 0;
+    }
+
+    .info .search input {
+        font-size: 12px;
+    }
+
+    .box .left .library .songList ul li {
+        font-size: 0.51rem;
+    }
+
+    .box .right .loginBar .login a {
+        width: 60px;
+        font-size: 13px;
+    }
+
+    .box .right .loginBar .login a:hover {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .allInfo {
+        width: 80%;
+    }
+
+    .seekBar {
+        width: 90%;
+    }
+
+    .allInfo .songInfo span {
+        font-size: 12px;
+    }
+
+    .allInfo .songTime {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .box .left .library .libraryLogo h3 {
+        font-size: 0.55rem;
+    }
+
+    .box .left .library .songList ul li {
+        font-size: 0.35rem;
+    }
+
+    .box .right .cardContainer {
+        justify-content: center;
+    }
+
+    .box .right .cardContainer .card {
+        width: 150px;
+    }
+
+    .allInfo {
+        width: 85%;
+    }
+
+    .allInfo .songInfo span {
+        font-size: 10px;
+    }
+
+    .seekBar {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h2 {
+        font-size: 0.75rem;
+
+    }
+
+    .box .left {
+        display: none;
+    }
+
+    a {
+        width: 35px;
+    }
+
+    .box .right {
+        width: 100%;
+    }
+
+    .box .right .cardContainer .card {
+        width: 160px;
+    }
+
+    .allInfo {
+        width: 90%;
+        height: 35px;
+    }
+
+    .allInfo .songInfo span {
+        font-size: 10px;
+    }
+
+    .allInfo .songTime {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    h2 {
+        font-size: 0.5rem;
+    }
+
+    .box .right .cardContainer .card {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width:310px) {
+    .box .right .cardContainer {
+        justify-content: center;
+    }
+
+    .box .right .cardContainer .card {
+        width: 200px;
+    }
+
+    .seekBar {
+        position: relative;
+        bottom: 5PX;
+    }
+
+    .allInfo {
+        padding: 2px 1px;
+    }
+
+    .allInfo .songButtons {
+        width: 50px;
+    }
+
+    .allInfo .songButtons .controller {
+        width: 10px;
+        height: 10px;
+    }
+
+    .allInfo .songTime {
+        width: 50px;
+        font-size: 10px;
+    }
+
+
+    .allInfo {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:280px) {
+    h2 {
+        font-size: 6px;
+    }
+
+    .songInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songTime {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box .right .loginBar .login a {
+        width: 40px;
+        font-size: 10px;
+    }
+
+    .box .right .loginBar .login a:hover {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .header {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header img {
+        width: 50px;
+        height: 35px;
+    }
+
+    .header h2 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:160px) {
+    .allInfo {
+        width: 100%;
+        max-height: 30px;
+        padding: 0;
+    }
+
+    .allInfo .songInfo {
+        width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 7px;
+    }
+
+    .allInfo .songTime {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 10px;
+    }
+
+    .allInfo .songButtons {
+        width: max-content;
+    }
+
+    .allInfo .songButtons .controller {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    .loginBar img {
+        min-height: 10px;
+        min-width: 10px;
+    }
+
+    .box .right .loginBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        padding: 0;
+    }
+
+    .box .right .loginBar .login {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .box .right .loginBar .login a {
+        width: 30px;
+        height: 30px;
+        font-size: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box .right .loginBar .login a:hover {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width:120px) {
+
+    .box .right .cardContainer .card {
+        width: 50px;
+        word-break: break-all;
+    }
+
+    .box .right .cardContainer .card h2 {
+        font-size: 10px;
+    }
+
+    .box .right .cardContainer .card p {
+        font-size: 8px;
+    }
+
+    .songTime {
+        display: none;
+    }
+
+
+    .box .right .loginBar .login a {
+        margin: 0;
+        max-width: 25px;
+        border-radius: 5px;
+        height: 20px;
+        font-size: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width:90px) {
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:70px) {
+    .songInfo {
+        display: none;
+    }
+
+    .allInfo .songButtons {
+        width: 40px;
+    }
+}

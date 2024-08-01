@@ -1,0 +1,67 @@
+.border {
+    border: 2px solid red;
+}
+
+.black{
+    border: 2px solid black;
+}
+
+.blue{
+    border: 2px solid blue;
+}
+.box .left img{
+    height: 30px;
+    width: 30px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px;
+}
+
+
+
+
+body::-webkit-scrollbar-button {
+    background-color: #fa2121;
+    /* pink color */
+    border: none;
+    /* remove borders */
+    border-radius: 0;
+    /* remove rounded corners */
+    width: 10px;
+    /* adjust the width of the buttons */
+}
+
+body::-webkit-scrollbar-button:horizontal {
+    height: 10px;
+    /* adjust the height of the horizontal buttons */
+}
+
+body::-webkit-scrollbar-button:vertical {
+    height: 10px;
+    /* adjust the height of the vertical buttons */
+}
+
+body::-webkit-scrollbar-button:hover {
+    background-color: #ff8ba2;
+    /* slightly darker pink color on hover */
+}
+
+
+body::-webkit-scrollbar-corner {
+    background-color: transparent;
+    /* remove corner styling */
+}
+
+
+
+
+body {
+    scrollbar-width: thin;
+    /* adjust the width of the scrollbar */
+    scrollbar-color: #cfa0a0 #fccfcf;
+    /* thumb color and track color */
+}
