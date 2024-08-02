@@ -20,6 +20,8 @@ Technical Details:
 - Utilized async/await functions for efficient data handling
 - Implemented Live Server for development and testing
 - CSS for styling and layout
+- Still Working on LogIn and SignUp buttons will  be activated soon
+  
 
 Getting Started:
 
