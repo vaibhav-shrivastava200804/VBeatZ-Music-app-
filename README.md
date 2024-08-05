@@ -28,7 +28,6 @@ Getting Started:
 1. Clone the repository to your local machine
 2. Open the project folder in your preferred code editor
 3. Run live-server in the terminal to start the development server
-4. Open your web browser and navigate to http://localhost:8080
 
 Contributing:
 
