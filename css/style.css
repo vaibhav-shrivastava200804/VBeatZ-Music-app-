@@ -50,6 +50,7 @@ body {
 }
 
 .box .left {
+    display: block;
     padding: 5px 10px;
     border-radius: 10px;
     width: 25%;
@@ -180,11 +181,16 @@ body {
     overflow: auto;
 }
 
-.box .right .loginBar img {
+#menu{
+    display: none;
+}
+
+.box .right .loginBar .login img {
     margin: 0 10px;
     height: 100%;
-    width: 6.5%;
+    width: 25.5%;
 }
+
 
 .box .right .loginBar .login {
     display: flex;
@@ -481,8 +487,18 @@ body {
 
     }
 
+    .box{
+        display: block;
+    }
+
     .box .left {
         display: none;
+        background: pink;
+        min-width: 130px;
+        position: absolute;
+        height: 70%;
+        left: 10px;
+        z-index: 1;
     }
 
     a {
@@ -509,11 +525,36 @@ body {
     .allInfo .songTime {
         font-size: 10px;
     }
+
+    #menu{
+        display: block;
+    }
 }
 
 @media screen and (max-width:380px) {
     h2 {
         font-size: 0.5rem;
+    }
+
+    .box .right .loginBar .login img {
+        margin: 0 10px;
+        height: 100%;
+        width: 25px;
+    }
+    
+    .box .right .loginBar .login {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        height: 40px;
+        margin: 0px 5px;
+    }
+
+    .box .right .loginBar .login a {
+        height: 90%;
+        width: 50px;
     }
 
     .box .right .cardContainer .card {
@@ -579,8 +620,14 @@ body {
         text-overflow: ellipsis;
     }
 
+    .box .right .loginBar .login img {
+        margin: 0 10px;
+        height: 100%;
+        width: 15px;
+    }
+
     .box .right .loginBar .login a {
-        width: 40px;
+        width: 30px;
         font-size: 10px;
     }
 
@@ -606,6 +653,35 @@ body {
 
 }
 
+@media screen and (max-width:185px){
+    .box .right .loginBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        padding: 0;
+    }
+
+    .box .right .loginBar .login {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .box .right .loginBar .login a {
+        width: 30px;
+        height: 30px;
+        font-size: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box .right .loginBar .login a:hover {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 @media screen and (max-width:160px) {
     .allInfo {
         width: 100%;
