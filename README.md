@@ -13,6 +13,7 @@ Features:
 - Play/Pause buttons and Next/Previous buttons for seamless music playback
 - Looping functionality: last song -> first song, first song -> last song
 - Seekbar: click to update current song time based on percentage
+- Hamburger: click on hamburger to see song list on mobile phone
 
 Technical Details:
 
