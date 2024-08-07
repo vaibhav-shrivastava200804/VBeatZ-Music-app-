@@ -1,4 +1,3 @@
-//<li>Lorem ipsum dolor sit amet.</li>
 /*<div class="card black">
     <img src="/VBeatZ/images/cover.jpg" alt="">
         <h2>Love Hits</h2>
