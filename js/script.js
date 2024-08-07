@@ -1,3 +1,4 @@
+//<li>Lorem ipsum dolor sit amet.</li>
 /*<div class="card black">
     <img src="/VBeatZ/images/cover.jpg" alt="">
         <h2>Love Hits</h2>
@@ -32,7 +33,7 @@ function secondsToMinutesSeconds(seconds) {
 async function getSongs(folder) {
   currFolder = folder;
   //console.log(currFolder);
-  let a = await fetch(`Songs/${currFolder}`);
+  let a = await fetch(`songs/${currFolder}`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -87,7 +88,7 @@ async function getSongs(folder) {
 
 // to play music
 async function playMusic(track) {
-  currentSong.src = `Songs/${currFolder}/` + track;
+  currentSong.src = `songs/${currFolder}/` + track;
   currentSong.play();
   document.querySelector(".songInfo").innerHTML = track
     .split("-")[0]
@@ -99,7 +100,7 @@ async function playMusic(track) {
 
 async function displayAlbums() {
   console.log("albums");
-  let a = await fetch(`Songs/`);
+  let a = await fetch(`songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -112,13 +113,13 @@ async function displayAlbums() {
     if (element.href.includes("/songs/")) {
       folder = element.href.split("/").slice(-1)[0];
       //console.log(folder);
-      let a = await fetch(`Songs/${folder}/description.json`);
+      let a = await fetch(`songs/${folder}/description.json`);
       let response = await a.json();
       //console.log(Object.keys(response));
       cardContainer.innerHTML =
         cardContainer.innerHTML +
         `<div data-set=${folder} class="card black">
-                <img src="Songs/${folder}/cover.jpg" alt="">
+                <img src="songs/${folder}/cover.jpg" alt="">
                 <h2>${response.title}</h2>
                 <p>${response.description}</p>
            </div>`;
@@ -181,7 +182,7 @@ async function main() {
     console.log(`current song index= ${index}`);
     if (index === 0) {
       console.log(`current song index= ${songs.length - 1}`);
-      currentSong.src = `Songs/${currFolder}/` + songs[songs.length - 1];
+      currentSong.src = `songs/${currFolder}/` + songs[songs.length - 1];
       playMusic(currentSong.src.split(`/${currFolder}/`)[1]);
     } else {
       let newIndex = index - 1;
@@ -198,12 +199,12 @@ async function main() {
     //console.log(songs.length);
     if (index + 1 === songs.length) {
       console.log(`current song index= ${0}`);
-      currentSong.src = `Songs/${currFolder}/` + songs[0];
+      currentSong.src = `songs/${currFolder}/` + songs[0];
       playMusic(currentSong.src.split(`/${currFolder}/`)[1]);
     } else {
       let newIndex = index + 1;
       console.log(`new song index ${newIndex}`);
-      currentSong.src = `Songs/${currFolder}/` + songs[newIndex];
+      currentSong.src = `songs/${currFolder}/` + songs[newIndex];
       playMusic(currentSong.src.split(`/${currFolder}/`)[1]);
     }
   });
@@ -223,12 +224,12 @@ async function main() {
       //console.log(songs.length);
       if (index + 1 === songs.length) {
         //console.log(0);
-        currentSong.src = `Songs/${currFolder}/` + songs[0];
+        currentSong.src = `songs/${currFolder}/` + songs[0];
         playMusic(currentSong.src.split(`/${currFolder}/`)[1]);
       } else {
         let newIndex = index + 1;
         console.log(`new song index ${newIndex}`);
-        currentSong.src = `Songs/${currFolder}/` + songs[newIndex];
+        currentSong.src = `songs/${currFolder}/` + songs[newIndex];
         playMusic(currentSong.src.split(`/${currFolder}/`)[1]);
       }
     }
